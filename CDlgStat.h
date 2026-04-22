@@ -37,8 +37,15 @@ public:
     void InitList();
     void LoadAllRecords(CArray<Record, Record>& arr);
     void Query();
-    void DrawPie(CPaintDC& dc, int cateCount[6]);
+    void DrawPie(CDC* pDC, CRect rect, double cateAmount[6]);  // 修改参数
 
     afx_msg void OnBnClickedBtnQuery();
     afx_msg void OnPaint();
+
+private:
+    // 添加成员变量保存统计数据
+    double m_cateAmount[6];  // 存储各分类的支出金额
+    double m_totalOut;       // 存储总支出
+    CString m_startDate;     // 保存查询起始日期
+    CString m_endDate;       // 保存查询结束日期
 };
