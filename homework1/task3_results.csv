@@ -1,0 +1,2 @@
+method,test_acc,test_f1
+BERT-base-uncased,0.9826388888888888,0.9624541837814308
